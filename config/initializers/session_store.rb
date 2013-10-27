@@ -1,3 +1,3 @@
 # Be sure to restart your server when you modify this file.
 
-Zugfahrt::Application.config.session_store :cookie_store, key: '_zugfahrt_session'
+Bilist::Application.config.session_store :cookie_store, key: '_bilist_session'

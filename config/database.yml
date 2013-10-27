@@ -1,8 +1,8 @@
 postgresql: &postgresql
   adapter: postgresql
   encoding: unicode
-  username: <%= ENV['ZUGFAHRT_DB_USERNAME_POSTGRES'] || 'andy' %>
-  password: <%= ENV['ZUGFAHRT_DB_PASSWORD_POSTGRES'] || '' %>
+  username: <%= ENV['BILIST_DB_USERNAME_POSTGRES'] || 'andy' %>
+  password: <%= ENV['BILIST_DB_PASSWORD_POSTGRES'] || '' %>
   min_messages: ERROR
 
 defaults: &defaults
@@ -12,15 +12,15 @@ defaults: &defaults
   <<: *postgresql
 
 development:
-  database: zugfahrt_development
+  database: bilist_development
   <<: *defaults
 
 test:
-  database: zugfahrt_test
+  database: bilist_test
   <<: *defaults
 
 production:
-  database: zugfahrt_production
+  database: bilist_production
   <<: *defaults
 
 

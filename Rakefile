@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Zugfahrt::Application.load_tasks
+Bilist::Application.load_tasks
