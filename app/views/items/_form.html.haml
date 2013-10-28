@@ -1,0 +1,35 @@
+= form_for item do |f|
+
+  - if item.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(item.errors.count, "error")} prohibited this item from being saved:"
+      %ul
+        - item.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field.item
+    = f.label :source
+    = f.text_field :source
+  .field.item
+    = f.label :comment
+    = f.text_field :comment
+  .field.item
+    = f.label :url
+    = f.text_field :url
+  .field.item
+    = f.label :done
+    = f.check_box :done
+
+  .actions.item
+    = f.submit 'Save'
+
+  - unless item.new_record?
+    - if item.done
+      .field.item
+        = link_to "(x)", item, method: :delete
+    - else
+      (x)
+
+    .field.item
+      = f.label item.translation
+

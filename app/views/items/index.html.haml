@@ -1,0 +1,6 @@
+%h2 List of items
+
+- @items.each do |item|
+  = render 'form', :item => item
+
+= render 'form', item: Item.new
